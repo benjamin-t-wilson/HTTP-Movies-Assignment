@@ -1,0 +1,292 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-size: 62.5%;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+$primary: #5b85aa;
+$secondary: #02a9ea;
+$tertiary: #0cbaba;
+
+#root {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  .saved-list {
+    width: 90%;
+    padding: 20px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(240, 240, 240);
+    box-shadow: 2px 2px 5px #999;
+    h3 {
+      font-size: 2rem;
+    }
+    a {
+      text-decoration: none;
+      font-size: 1rem;
+      margin: 10px 20px;
+      padding: 10px 20px;
+      background: $primary;
+      border-radius: 15px;
+      color: white;
+      box-shadow: 2px 2px 5px #666;
+      &:hover {
+        background: $secondary;
+      }
+    }
+  }
+  .movie-list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+  }
+  .movie-card {
+    margin: 20px;
+    padding: 20px;
+    background: rgb(240, 240, 240);
+    box-shadow: 2px 2px 5px #666;
+    h2 {
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+    div {
+      font-size: 1rem;
+      color: #777;
+      margin: 5px 0;
+      em,
+      strong {
+        color: black;
+      }
+    }
+    .movie-star {
+      color: black;
+      margin: 5px 0;
+    }
+    h3 {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+  }
+  .btnList {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    button {
+      border: 0;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background: $primary;
+      border-radius: 15px;
+      color: white;
+      box-shadow: 2px 2px 5px #666;
+      &:hover {
+        background: $secondary;
+        cursor: pointer;
+      }
+    }
+    .delBtn {
+      background: crimson;
+      &:hover {
+        background: red;
+      }
+    }
+  }
+  .updateMovie, .addMovie {
+    header{
+      margin: 20px 0;
+      padding: 20px;
+      background: rgb(240, 240, 240);
+      box-shadow: 2px 2px 5px #666;
+      h1{
+        font-size: 2rem;
+      }
+      p{
+        margin: 10px 0;
+        font-size: 1rem;
+      }
+    }
+    min-width: 600px;
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+      padding: 20px;
+      background: rgb(240, 240, 240);
+      box-shadow: 2px 2px 5px #666;
+      h1 {
+        width: 100%;
+        font-size: 2rem;
+        margin: 15px;
+      }
+      p {
+        width: 100%;
+        margin: 10px;
+        font-size: 1rem;
+        span{
+          color: red;
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+      }
+      input {
+        width: 100%;
+        margin: 20px 0;
+        border: 0;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px #666;
+      }
+      button {
+        border: 0;
+        margin: 15px 0;
+        padding: 10px 20px;
+        font-size: 1rem;
+        background: $primary;
+        border-radius: 15px;
+        color: white;
+        box-shadow: 2px 2px 5px #666;
+        &:hover {
+          background: $secondary;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
